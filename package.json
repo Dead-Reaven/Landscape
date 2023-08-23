@@ -1,0 +1,21 @@
+{
+	"name": "land-space",
+	"version": "1.0.0",
+	"homepage": "https://dead-reaven.github.io/land-space/",
+	"dependencies": {
+		"gh-pages": "^6.0.0",
+		"scss": "^0.2.4",
+		"swiper": "^10.1.0"
+	},
+	"scripts": {
+		"watch": "sass --watch src/scss/main.scss build/index.css",
+		"start": "parcel src/index.html",
+		"build": "parcel build src/index.html --public-url ./",
+		"deploy": "gh-pages -d dist",
+		"predeploy": "npm run build"
+	},
+	"devDependencies": {
+		"@parcel/transformer-sass": "^2.9.3",
+		"parcel": "^2.9.3"
+	}
+}

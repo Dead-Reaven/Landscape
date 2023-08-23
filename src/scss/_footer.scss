@@ -1,0 +1,71 @@
+@use './sizes' as *;
+
+footer {
+	background-color: #282828;
+
+	@media (width > $desctop) {
+		padding: 60px;
+	}
+	@media (width < $desctop) {
+		padding: 40px;
+	}
+	@media (width < $tablet) {
+		padding: 16px;
+	}
+	.container {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		.content-container {
+			width: 350px;
+			max-width: 350px;
+			padding: 15px;
+			display: flex;
+			flex-direction: column;
+			flex: content 1 1;
+			gap: 20px;
+		}
+		.title {
+			color: var(--white-text, #f7f7f7);
+			text-align: center;
+
+			/* heading_footer-mobile */
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 18px; /* 100% */
+			margin-bottom: 12px;
+		}
+		a {
+			color: var(--white-text, #f7f7f7);
+			text-align: center;
+			font-feature-settings: 'clig' off, 'liga' off;
+
+			/* Main text mobile/body */
+			font-family: 'Source Sans 3', sans-serif;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 24px; /* 150% */
+		}
+		#contacts {
+			// align-content: center;
+			text-align: center;
+			img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+		.media-container {
+			img {
+				margin-right: 10px;
+			}
+		}
+	}
+	.divider {
+		color: white;
+		border-top: 1px solid #f7f7f7;
+	}
+}

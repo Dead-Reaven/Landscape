@@ -1,0 +1,98 @@
+@use '../sizes' as *;
+
+/* Define keyframes for opening animation */
+@keyframes openAnimation {
+	0% {
+		max-height: 0;
+		opacity: 0;
+	}
+
+	100% {
+		max-height: 500px; /* Adjust the maximum height as needed */
+		opacity: 1;
+	}
+}
+
+/* Define keyframes for closing animation */
+@keyframes closeAnimation {
+	0% {
+		max-height: 500px; /* Adjust the maximum height as needed */
+		opacity: 1;
+	}
+	100% {
+		max-height: 0;
+		opacity: 0;
+	}
+}
+
+#services {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	.service-card {
+		background-image: url('/src/Assets/service/background1.jpg');
+		background-size: cover;
+		height: auto;
+		// padding: 20px;
+		border-radius: 20px;
+
+		background-size: cover;
+		background-position: center;
+
+		.text-container {
+			padding: 20px 26px;
+			background: linear-gradient(rgba(52, 98, 63, 0.8), rgba(52, 98, 63, 0.8));
+			width: 100%;
+			border-radius: 20px 0px 92px 20px;
+			height: 100%;
+			max-width: fit-content;
+		}
+
+		.title {
+			width: 100%;
+			display: flex;
+			// justify-content: center;
+			align-items: center;
+
+			.title-text {
+				margin-left: 12px;
+				@media (width > $tablet) {
+					margin-left: 24px;
+				}
+			}
+		}
+		.body-text {
+			margin-top: 8px;
+
+			@media (width > $tablet) {
+				margin-top: 44px;
+			}
+		}
+
+		.service-ico {
+			height: 48px;
+			width: 48px;
+		}
+	}
+
+	.service-card:last-child {
+		background: url('/src/Assets/service/garden_master.jpg') no-repeat;
+		background-size: cover;
+		background-position: center top left;
+	}
+
+	* {
+		color: #f7f7f7;
+	}
+
+	#card-content {
+		&.animate-open {
+			animation: openAnimation 0.9s ease forwards;
+		}
+		&.animate-close {
+			animation: closeAnimation 0.9s ease forwards;
+		}
+	}
+}

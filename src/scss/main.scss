@@ -1,0 +1,47 @@
+@use './null.scss';
+@use './fonts.scss';
+@use './buttons' as *;
+@use './sizes.scss' as *;
+@use 'header.scss';
+@use './sections/hero';
+@use './sections/about';
+@use './sections/best_works';
+@use './sections/stats';
+@use './sections/team';
+@use './sections/service';
+@use './sections/discount';
+@use './sections/client_story';
+@use './sections/form_contacts';
+@use './footer';
+
+$background: #f7fcf0;
+
+.app {
+	padding-top: 0px;
+	background-color: $background;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	@media (width >= $desctop) {
+		// gap: 180px;
+		margin-top: -60px;
+	}
+	@media (width < $desctop) {
+		// gap: 120px;
+	}
+	@media (width < $tablet) {
+		// gap: 80px;
+	}
+	margin-bottom: 80px;
+}
+
+.container {
+	@include ContainerMedia;
+}
+
+.swaper {
+	width: 100%;
+	height: 500px;
+}

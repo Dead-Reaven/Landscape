@@ -1,0 +1,22 @@
+$phone: 393px;
+$tablet: 767px;
+$desctop: 1280px;
+
+@mixin ContainerMedia {
+	//desctop
+	width: 100%;
+	margin: auto;
+	max-width: 1280px;
+	@media (width >= $desctop) {
+		max-width: $desctop;
+		padding: 61px;
+	}
+	// tablet
+	@media (width < $desctop) {
+		padding: 24px;
+	}
+	//mobile
+	@media (width < $tablet) {
+		padding: 16px;
+	}
+}

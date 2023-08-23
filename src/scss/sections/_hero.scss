@@ -1,0 +1,56 @@
+@use '../sizes' as *;
+
+.hero-container {
+	@media (width < $phone) {
+		min-height: calc(100vh - 120px);
+	}
+	@media (width > $phone) {
+		min-height: calc(100vh - 140px);
+	}
+	@media (width > $tablet) {
+		min-height: calc(100vh - 140px);
+	}
+	@media (width > $desctop) {
+		min-height: calc(100vh - 140px);
+	}
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	color: #f7f7f7;
+	background: rgba(52, 98, 63, 0.8);
+	border-radius: 20px;
+	text-align: center;
+
+	// padding-top: 90px !important;
+
+	position: relative;
+	h1 {
+		margin-bottom: 16px;
+	}
+	p {
+		margin-bottom: 16px;
+	}
+	// background
+	background: linear-gradient(rgba(52, 98, 63, 0.8), rgba(52, 98, 63, 0.8)),
+		url('/src/Assets/Main_Background.png');
+	background-position: center;
+	background-size: cover;
+
+	.button-container {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		@media (width > $tablet) {
+			flex-direction: row;
+			justify-content: center;
+			.primary {
+				max-width: 250px;
+			}
+			.secondary {
+				max-width: 220px;
+			}
+		}
+	}
+}

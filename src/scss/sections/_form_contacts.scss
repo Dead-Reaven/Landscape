@@ -1,0 +1,71 @@
+@use '../sizes' as *;
+
+#form-contacts {
+	background-color: #dfebd0;
+	border-radius: 20px;
+	padding: 20px 40px;
+
+	max-width: 1160px;
+	@media (width > 900px) {
+		padding: 100px 147.5px 90px 146.5px;
+		gap: 60px;
+	}
+	@media (width < $tablet) {
+		gap: 20px;
+	}
+	@media (width < $phone) {
+		padding: 20px 20px;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+
+		border-radius: 20px;
+		padding: 24px 16px;
+		background-color: #fdfdfd;
+		@media (width > $tablet) {
+			flex-direction: row;
+			justify-items: space-between;
+		}
+
+		.info,
+		.hours,
+		.connect,
+		.left-bar {
+			display: flex;
+			justify-content: center;
+
+			flex-direction: column;
+			margin: auto;
+			gap: 10px;
+			margin-bottom: 30px;
+			div {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			input {
+				width: 300px;
+				color: #545454;
+				/* body_text */
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 30px; /* 166.667% */
+				border-radius: 20px;
+				border: 1px solid var(--green-70, #8dc299);
+				padding: 12px 24px;
+			}
+		}
+
+		h3 {
+			text-align: center;
+			color: #607744;
+			font-size: 28px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 38px; /* 135.714% */
+			margin-bottom: 15px;
+		}
+	}
+}

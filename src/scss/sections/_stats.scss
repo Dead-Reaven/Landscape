@@ -1,0 +1,49 @@
+@use '../sizes' as *;
+
+.stats-container {
+	height: calc(90vh);
+	min-height: 700px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	color: #f7f7f7;
+	background: rgba(52, 98, 63, 0.8);
+	border-radius: 20px;
+
+	position: relative;
+	text-align: center;
+	border-radius: 20px;
+	div {
+		h4 {
+			color: #f7f7f7;
+			/* stats_number */
+			font-size: 44px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 50px; /* 113.636% */
+		}
+		p {
+			color: #f7f7f7;
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 30px; /* 125% */
+		}
+	}
+	@media (width >= $tablet) {
+		flex-direction: row;
+		height: 234px;
+		min-height: 234px;
+		align-items: center;
+	}
+}
+
+.stats-background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-position: center;
+	object-fit: cover;
+	border-radius: 20px;
+}

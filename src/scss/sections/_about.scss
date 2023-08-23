@@ -1,0 +1,34 @@
+@use '../sizes' as *;
+
+#about {
+	.cards-container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		gap: 20px;
+		@media (width > $tablet) {
+			flex-direction: row;
+		}
+		.card {
+			display: flex;
+			flex-direction: column;
+			min-height: 300px;
+			flex: 370px 1 1;
+
+			// max-width: 512px;
+			border-radius: 20px;
+			border: 1px solid #8dc299;
+			background: #fdfdfd;
+			padding: 20px;
+			gap: 20px;
+
+			& > img {
+				width: 64px;
+			}
+			button {
+				text-align: left;
+				padding: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,126 @@
+@use './sizes.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@700&family=Source+Sans+3:wght@400;700&display=swap');
+
+$font-black: #222;
+$font-white: #f7f7f7;
+$font-greeen: #34623f;
+
+.green-text {
+	color: $font-greeen;
+}
+
+.font-white {
+	color: $font-white;
+}
+.font-black {
+	color: $font-black;
+}
+.center-text {
+	text-align: center;
+}
+p,
+.body-text {
+	/* Main text/body */
+	font-family: 'Source Sans 3', sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 30px; /* 166.667% */
+	/* Main text mobile/body */
+	@media (width < $tablet) {
+		font-size: 16px;
+		line-height: 24px; /* 150% */
+	}
+}
+
+button {
+	font-family: 'Source Sans 3', sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 18px; /* 100% */
+}
+
+.menu {
+	font-family: 'Source Sans 3', sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px; /* 100% */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Fira Sans Extra Condensed', 'sans-serif';
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-style: normal;
+	color: $font-black;
+}
+h1 {
+	font-size: 56px;
+	font-style: normal;
+	font-weight: 700;
+
+	line-height: 66px; /* 117.857% */
+	@media (width < $tablet) {
+		font-size: 44px;
+		font-style: normal;
+		line-height: 50px; /* 113.636% */
+	}
+}
+h2 {
+	font-size: 36px;
+	font-style: normal;
+	line-height: 135%; /* 48.6px */
+	letter-spacing: 4%;
+
+	@media (width < $tablet) {
+		font-size: 32px;
+		line-height: 135%; /* 43.2px */
+	}
+}
+
+h3 {
+	font-size: 28px;
+	line-height: 38px; /* 135.714% */
+
+	@media (width < $tablet) {
+		font-size: 24px;
+		line-height: 24px; /* 100% */
+	}
+}
+
+h4 {
+	font-size: 28px;
+	line-height: 38px; /* 135.714% */
+	@media (width < $tablet) {
+		font-size: 20px;
+		font-style: normal;
+		line-height: 36px; /* 180% */
+	}
+}
+
+.bold {
+	font-weight: 700;
+}
+.sans {
+	font-family: 'Source Sans 3', sans-serif;
+}
+.fira {
+	font-family: 'Fira Sans Extra Condensed', 'sans-serif';
+}
+#logo {
+	#magic {
+		line-height: 30px; /* 150% */
+		font-size: 18px;
+	}
+	#create {
+		font-size: 12px;
+		line-height: 12px; /* 150% */
+	}
+}
