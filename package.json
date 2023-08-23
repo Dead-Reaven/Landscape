@@ -1,7 +1,7 @@
 {
 	"name": "land-space",
 	"version": "1.0.0",
-	"homepage": "https://dead-reaven.github.io/land-space/",
+	"homepage": "https://dead-reaven.github.io/Landscape/",
 	"dependencies": {
 		"gh-pages": "^6.0.0",
 		"scss": "^0.2.4",
