@@ -263,7 +263,7 @@ header {
 header #logo {
   display: flex;
 }
-@media (width > 767px) {
+@media (width >= 961px) {
   header #burger-button {
     display: none;
   }
@@ -272,7 +272,7 @@ header #logo,
 header #burger-button {
   z-index: 4;
 }
-@media (width < 767px) {
+@media (width < 961px) {
   header #menu {
     position: absolute;
     left: 0px;
@@ -296,7 +296,7 @@ header #burger-button {
     display: none;
   }
 }
-@media (width > 767px) {
+@media (width >= 961px) {
   header #menu button {
     display: none;
   }
@@ -322,9 +322,7 @@ header #burger-button {
     display: none;
   }
 }
-header #header-top-button + #menu #header-menu-button {
-  display: none;
-}
+
 .hero-container {
   display: flex;
   flex-direction: column;

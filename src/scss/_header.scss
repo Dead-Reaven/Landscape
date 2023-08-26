@@ -1,6 +1,7 @@
 @use './sizes.scss' as *;
 
 $background: #f7fcf0;
+$toggle-breakpoint: 961px;
 
 header {
 	height: 96px;
@@ -12,7 +13,7 @@ header {
 	#logo {
 		display: flex;
 	}
-	@media (width > $tablet) {
+	@media (width >= $toggle-breakpoint) {
 		#burger-button {
 			display: none;
 		}
@@ -23,7 +24,7 @@ header {
 	}
 
 	#menu {
-		@media (width < $tablet) {
+		@media (width < $toggle-breakpoint) {
 			position: absolute;
 			left: 0px;
 			bottom: calc(-100vh + 112px);
@@ -45,7 +46,7 @@ header {
 				display: none;
 			}
 		}
-		@media (width > $tablet) {
+		@media (width >= $toggle-breakpoint) {
 			button {
 				display: none;
 			}
@@ -55,13 +56,6 @@ header {
 				display: flex;
 				align-items: center;
 				justify-content: space-around;
-				li {
-					// justify-self: center;
-					button {
-						// display: none;
-						// justify-self: end;
-					}
-				}
 
 				li a {
 					display: inline-block;
@@ -79,10 +73,5 @@ header {
 		@media (width < 460px) {
 			display: none;
 		}
-		& + #menu #header-menu-button {
-			display: none;
-		}
-	}
-	#header-menu-button {
 	}
 }
