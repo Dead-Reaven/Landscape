@@ -1,5 +1,5 @@
-const swiperEl = document.querySelector('swiper-container')
-const clientsContainer = document.querySelector('#clients-swiper')
+const BestWorksSwiper = document.querySelector('swiper-container')
+const ClientsSwiper = document.querySelector('#clients-swiper')
 // const cardsTeam = document.querySelector('.container-cards')
 const injectStyles = [
 	`
@@ -22,6 +22,7 @@ const injectStyles = [
 }
 `,
 ]
+
 const clientContainerParams = {
 	injectStyles,
 	pagination: {
@@ -29,7 +30,7 @@ const clientContainerParams = {
 	},
 }
 
-const params = {
+const BestWorksParams = {
 	injectStyles,
 	pagination: {
 		clickable: true,
@@ -37,8 +38,27 @@ const params = {
 	loop: true,
 }
 
-Object.assign(swiperEl, params)
-Object.assign(clientsContainer, clientContainerParams)
+Object.assign(BestWorksSwiper, BestWorksParams)
+Object.assign(ClientsSwiper, clientContainerParams)
 
-swiperEl.initialize()
-clientsContainer.initialize()
+BestWorksSwiper.initialize()
+ClientsSwiper.initialize()
+
+// swipe when click on tabs
+const tabs = document.querySelectorAll('.tab h4')
+tabs.forEach((h4, index) => {
+	h4.addEventListener('click', () => {
+		BestWorksSwiper.swiper.slideTo(index)
+	})
+})
+// change style of current active tab
+BestWorksSwiper.swiper.on('slideChange', () => {
+	const currentIndex = BestWorksSwiper.swiper.realIndex
+	const tabs = document.querySelectorAll('.tab h4')
+	tabs.forEach((h4, index) => {
+		if (index === currentIndex) {
+			return h4.classList.add('active')
+		}
+		h4.classList.remove('active')
+	})
+})

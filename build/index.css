@@ -525,18 +525,25 @@ header #burger-button {
 
 .stats-container {
   height: 90vh;
-  min-height: 700px;
+  min-height: 500px;
+  color: #f7f7f7;
+  background: rgba(52, 98, 63, 0.8);
+  position: relative;
+  text-align: center;
+}
+@media (width >= 767px) {
+  .stats-container {
+    height: 234px;
+    min-height: 234px;
+  }
+}
+.stats-container .container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: #f7f7f7;
-  background: rgba(52, 98, 63, 0.8);
-  border-radius: 20px;
-  position: relative;
-  text-align: center;
-  border-radius: 20px;
+  height: 100%;
 }
-.stats-container div h4 {
+.stats-container .container .stat h4 {
   color: #f7f7f7;
   /* stats_number */
   font-size: 44px;
@@ -544,14 +551,15 @@ header #burger-button {
   font-weight: 700;
   line-height: 50px; /* 113.636% */
 }
-.stats-container div p {
+.stats-container .container .stat p {
   color: #f7f7f7;
   font-size: 24px;
   font-weight: 600;
   line-height: 30px; /* 125% */
 }
 @media (width >= 767px) {
-  .stats-container {
+  .stats-container .container {
+    justify-content: space-between;
     flex-direction: row;
     height: 234px;
     min-height: 234px;
