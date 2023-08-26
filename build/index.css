@@ -580,19 +580,16 @@ header #header-top-button + #menu #header-menu-button {
 @media (width > 1280px) {
   .grid-team-container {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 100%;
   }
 }
 @media (width < 1280px) {
   .grid-team-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 100%;
   }
 }
 @media (width < 767px) {
   .grid-team-container {
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 100%;
   }
 }
 .grid-team-container * {
@@ -760,26 +757,26 @@ header #header-top-button + #menu #header-menu-button {
   animation: closeAnimation 0.9s ease forwards;
 }
 
-#discount .discount-container {
+.discount-container {
   display: flex;
 }
 @media (width > 767px) {
-  #discount .discount-container {
+  .discount-container {
     flex-direction: column;
   }
 }
 @media (width > 1280px) {
-  #discount .discount-container {
+  .discount-container {
     flex-direction: row;
   }
 }
-#discount .discount-container img {
+.discount-container img {
   display: none;
   object-fit: cover;
   border-radius: 20px;
 }
 @media (width > 767px) {
-  #discount .discount-container img {
+  .discount-container img {
     display: block;
     height: 400px;
     width: 100%;
@@ -787,13 +784,13 @@ header #header-top-button + #menu #header-menu-button {
   }
 }
 @media (width > 1280px) {
-  #discount .discount-container img {
+  .discount-container img {
     display: flex;
-    height: auto;
+    flex: auto;
     border-radius: 20px 0 0 20px;
   }
 }
-#discount .discount-container .discount {
+.discount-container .discount {
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -803,11 +800,11 @@ header #header-top-button + #menu #header-menu-button {
   flex-direction: column;
   gap: 25px;
 }
-#discount .discount-container .discount * {
+.discount-container .discount * {
   max-width: 531px;
 }
 @media (width > 767px) {
-  #discount .discount-container .discount {
+  .discount-container .discount {
     display: flex;
     height: auto;
     justify-content: space-around;
@@ -816,7 +813,7 @@ header #header-top-button + #menu #header-menu-button {
   }
 }
 @media (width > 1280px) {
-  #discount .discount-container .discount {
+  .discount-container .discount {
     display: flex;
     height: auto;
     justify-content: space-around;
