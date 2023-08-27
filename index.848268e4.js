@@ -1,0 +1,2 @@
+document.querySelector("#burger-button").addEventListener("click",()=>{let e=document.querySelector("#menu");e.style.display="flex"===e.style.display?"":"flex";let t=document.querySelector("#header-top-button");"flex"==e.style.display?t.style.display="none":t.removeAttribute("style")});const e=e=>{let t=e.querySelector("#card-content");t.classList.toggle("animate-open"),t.classList.toggle("animate-close")},t=document.querySelectorAll(".service-card");t.forEach(t=>{t.addEventListener("click",()=>e(t))});
+//# sourceMappingURL=index.848268e4.js.map
