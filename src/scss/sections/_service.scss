@@ -37,19 +37,6 @@
 		grid-column-gap: 15px;
 		grid-row-gap: 15px;
 
-		.service-card:first-child {
-			grid-area: 1 / 1 / 2 / 2;
-		}
-		.service-card:nth-child(2) {
-			grid-area: 2 / 1 / 3 / 2;
-		}
-		.service-card:nth-child(3) {
-			grid-area: 3 / 1 / 4 / 2;
-		}
-
-		.service-card:last-child {
-			grid-area: 1 / 2 / 4 / 3;
-		}
 		// max-height: 400px;
 	}
 
@@ -110,16 +97,16 @@
 		color: #f7f7f7;
 	}
 
-	#card-content {
-		max-height: 0;
-		opacity: 0;
-		&.animate-open {
-			animation: openAnimation 0.9s ease forwards;
-		}
-		&.animate-close {
-			@media (width < $desctop) {
-				animation: closeAnimation 0.9s ease forwards;
-			}
-		}
-	}
+	// #card-content {
+	// 	max-height: 0;
+	// 	opacity: 0;
+	// 	&.animate-open {
+	// 		animation: openAnimation 0.9s ease forwards;
+	// 	}
+	// 	&.animate-close {
+	// 		@media (width < $desctop) {
+	// 			animation: closeAnimation 0.9s ease forwards;
+	// 		}
+	// 	}
+	// }
 }
