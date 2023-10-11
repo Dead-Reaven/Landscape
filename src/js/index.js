@@ -7,15 +7,15 @@ const toggleBurger = () => {
 	else headerTopButton.removeAttribute('style')
 }
 
-document.querySelector('#burger-button').addEventListener('click', toggleBurger)
-
-//!!! service cards
+// service cards
 // Function to toggle the service card's state
+
 const toggleOpen = (card) => {
 	const content = card.querySelector('#card-content')
 	content.classList.add('animate-open')
 	content.classList.remove('animate-close')
 }
+
 const toggleClose = (card) => {
 	const content = card.querySelector('#card-content')
 	content.classList.add('animate-close')
@@ -47,3 +47,5 @@ serviceCards.forEach((card, idx) => {
 		}
 	})
 })
+
+document.querySelector('#burger-button').addEventListener('click', toggleBurger)
